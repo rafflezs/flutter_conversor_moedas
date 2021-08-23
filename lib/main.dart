@@ -36,19 +36,35 @@ class _HomeState extends State<Home> {
   double dolar;
   double euro;
 
+  void _clearTextController() {
+    controllerDolar.text = controllerEuro.text = controllerReal.text = "";
+  }
+
   void _controllerReal(String text) {
+    if (text.isEmpty) {
+      _clearTextController();
+      return;
+    }
     double real = double.parse(text);
     controllerDolar.text = (real / dolar).toStringAsFixed(2);
     controllerEuro.text = (real / euro).toStringAsFixed(2);
   }
 
   void _controllerDolar(String text) {
+    if (text.isEmpty) {
+      _clearTextController();
+      return;
+    }
     double dolar = double.parse(text);
     controllerReal.text = (dolar * this.dolar).toStringAsFixed(2);
     controllerEuro.text = (dolar * this.dolar / euro).toStringAsFixed(2);
   }
 
   void _controllerEuro(String text) {
+    if (text.isEmpty) {
+      _clearTextController();
+      return;
+    }
     double euro = double.parse(text);
     controllerReal.text = (euro * this.euro).toStringAsFixed(2);
     controllerDolar.text = (euro * this.euro / dolar).toStringAsFixed(2);
@@ -131,6 +147,7 @@ Widget buildTextField(String lbl, String prefx,
     ),
     style: TextStyle(color: Colors.amber, fontSize: 20),
     onChanged: controllerFunction,
-    keyboardType: TextInputType.number,
+    //Opção de decimais no iOs
+    keyboardType: TextInputType.numberWithOptions(decimal: true),
   );
 }
