@@ -12,7 +12,7 @@ Credits to [HGBrasil](https://hgbrasil.com/status/finance) for their currency ex
 
 ## Home page 📱
 
-<img src="https://user-images.githubusercontent.com/50029136/129618893-1d089616-f1a2-4e3b-8f3c-3459ea99e51c.png" width=30% height=30%>
+<img src="https://user-images.githubusercontent.com/50029136/130488761-25d23b68-7488-4f6e-bdcc-5bee007385d2.png" width=30% height=30%>
 
 ## Executing ❗
 
@@ -20,6 +20,6 @@ In order to execute this code, follow these steps:
 
 1. make shure you have [Flutter SDK](https://flutter.dev/docs/get-started/install) installed and set-up
     1. Make sure you also have a device (emulated or physical) 
-2. clone this repo: `$ git clone https://github.com/rafflezs/flutter_contador_hotel`
-3. change directory to the cloned repo folder: `cd flutter_contador_hotel-master` 
+2. clone this repo: `$ git clone https://github.com/rafflezs/flutter_conversor_moedas`
+3. change directory to the cloned repo folder: `cd flutter_conversor_moedas-master` 
 4. execute flutter: `flutter run`
